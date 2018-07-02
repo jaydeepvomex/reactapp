@@ -1,16 +1,18 @@
-const webpack = require('webpack-cli');
 const path = require('path');
-
-const APP_DIR = path.resolve(__dirname, '');
-const BUILD_DIR = path.resolve(__dirname, 'build');
+const APP_DIR = path.resolve(__dirname, 'src');
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
 const config = {
     entry: APP_DIR + '/HelloWorld.js',
-    output: {
-        path: BUILD_DIR,
-        filename: 'bundle.js'
+    devServer: {
+        contentBase: PUBLIC_DIR,
+        port: 9000,
+        open: true
     },
-    mode: 'development'
-}
+    output: {
+        path: PUBLIC_DIR,
+        filename: 'bundle.js'
+    }
+};
 
 module.exports = config;

@@ -2,6 +2,7 @@
   "name": "reactapp",
   "version": "1.0.0",
   "description": "React app with .net core",
+  "path": "^0.12.7",
   "main": "HelloWorld.js",
   "dependencies": {
     "webpack": "^4.14.0",
